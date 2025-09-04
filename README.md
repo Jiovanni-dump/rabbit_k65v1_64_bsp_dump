@@ -1,0 +1,14 @@
+# sys_mssi_64_cn-user 13 TP1A.220624.014 eng.jenkin.20250516.111421 release-keys
+- manufacturer: rabbit
+- platform: mt6765
+- codename: k65v1_64_bsp
+- flavor: sys_mssi_64_cn-user
+- release: 13
+- id: TP1A.220624.014
+- incremental: eng.jenkin.20250516.111421
+- tags: release-keys
+- fingerprint: Rabbit/vnd_k65v1_64_bsp/k65v1_64_bsp:12/SP1A.210812.016/20250516110847:user/release-keys
+- is_ab: true
+- brand: Rabbit
+- branch: sys_mssi_64_cn-user-13-TP1A.220624.014-eng.jenkin.20250516.111421-release-keys
+- repo: rabbit_k65v1_64_bsp_dump
