@@ -1,0 +1,23 @@
+####################################
+# from generate-common-build-props
+# These properties identify this partition image.
+####################################
+ro.product.system_ext.brand=Rabbit
+ro.product.system_ext.device=mssi_64_cn
+ro.product.system_ext.manufacturer=Rabbit
+ro.product.system_ext.model=mssi_64_cn
+ro.product.system_ext.name=sys_mssi_64_cn
+ro.system_ext.build.date=Fri May 16 11:14:16 CST 2025
+ro.system_ext.build.date.utc=1747365256
+ro.system_ext.build.fingerprint=Rabbit/sys_mssi_64_cn/mssi_64_cn:13/TP1A.220624.014/20250516111625:user/release-keys
+ro.system_ext.build.id=TP1A.220624.014
+ro.system_ext.build.tags=release-keys
+ro.system_ext.build.type=user
+ro.system_ext.build.version.incremental=eng.jenkin.20250516.111421
+ro.system_ext.build.version.release=13
+ro.system_ext.build.version.release_or_codename=13
+ro.system_ext.build.version.sdk=33
+####################################
+# from variable PRODUCT_SYSTEM_EXT_PROPERTIES
+####################################
+# end of file
