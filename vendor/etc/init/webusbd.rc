@@ -1,0 +1,35 @@
+# WebUSB daemon service
+# Handles data communication for WebUSB devices
+
+service webusbd /vendor/bin/webusbd
+    class main
+    user system
+    group system usb
+    disabled
+    oneshot
+
+# =============================================================================
+# WEBUSBD TRIGGERS FOR THREE-MODE USB CONFIGURATION SYSTEM
+# =============================================================================
+
+# Start webusbd for ADB+CUA mode (sys.usb.state=adb,cua)
+on property:sys.usb.state=adb,cua
+    write /dev/kmsg "CUA-USB: [WEBUSBD] state=adb,cua - waiting for devices"
+    wait /dev/webusb0 10
+    wait /dev/hidg1 5
+    wait /dev/hidg2 5
+    write /dev/kmsg "CUA-USB: [WEBUSBD] state=adb,cua - starting webusbd"
+    start webusbd
+
+# Start webusbd for pure CUA mode (sys.usb.state=cua)
+on property:sys.usb.state=cua
+    write /dev/kmsg "CUA-USB: [WEBUSBD] state=cua - waiting for devices"
+    wait /dev/webusb0 10
+    wait /dev/hidg1 5
+    wait /dev/hidg2 5
+    write /dev/kmsg "CUA-USB: [WEBUSBD] state=cua - starting webusbd"
+    start webusbd
+
+# =============================================================================
+# END OF WEBUSBD TRIGGERS
+# =============================================================================

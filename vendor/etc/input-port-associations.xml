@@ -1,0 +1,5 @@
+<ports>
+    <port display="0" input="mtk-pmic-keys" />
+    <port display="0" input="och1970_holl_key" />
+    <port display="0" input="mtk-kpd" />
+</ports>
