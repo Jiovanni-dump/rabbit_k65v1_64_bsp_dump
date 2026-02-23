@@ -1,0 +1,8 @@
+service proxy /system/bin/proxy.sh
+  user root
+  group root
+  disabled
+
+# start the service when boot is completed
+on property:sys.boot_completed=1
+  start proxy
